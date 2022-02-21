@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+
+    - name: setup python
+      uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+    - name: install poetry
+      uses: Gr1N/setup-poetry@v7
+
+    - name: Tests
+      run: poetry run pytest
+
+    - name: Lint
+      run: poetry run flake8

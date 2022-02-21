@@ -1,0 +1,4 @@
+[submodule "apper"]
+	path = apper
+	url = https://github.com/pseudomuto/apper.git
+  branch = some_extra_options

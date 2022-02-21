@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "addin",
+  "id": "95bd1300-617c-4d17-8a92-29a374ff3344",
+  "author": "David Muto",
+  "description": "Some useful fusion tools",
+  "version":  "0.1.0",
+  "runOnStartup": false,
+  "supportedOS":  "mac",
+  "editEnabled":  true
+}
