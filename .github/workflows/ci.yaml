@@ -29,7 +29,10 @@ jobs:
       run: poetry install
 
     - name: Tests
-      run: poetry run pytest
+      run: poetry run pytest --cov ./ --cov-report xml
 
     - name: Lint
       run: poetry run flake8
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
