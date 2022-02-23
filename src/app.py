@@ -1,7 +1,7 @@
 import os.path
 
 from apper import apper
-from .commands import LiveParamsCommand
+from .commands import LiveParamsCommand, PartsListCommand
 
 
 class App:
@@ -15,7 +15,7 @@ class App:
             root_path=base_dir,
         )
 
-        cmds = [LiveParamsCommand]
+        cmds = [LiveParamsCommand, PartsListCommand]
         [klass.register(self._addin) for klass in cmds]
 
     def run(self):
